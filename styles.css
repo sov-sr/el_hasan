@@ -10,10 +10,49 @@ body {
     color: #333;
 }
 
+html[lang="ar"] body {
+    font-family: 'Segoe UI', 'Droid Arabic Naskh', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0;
+}
+
+.lang-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+html[lang="ar"] .language-switcher {
+    justify-content: flex-start;
 }
 
 /* Navigation */
@@ -33,6 +72,10 @@ body {
     align-items: center;
 }
 
+html[lang="ar"] .navbar .container {
+    flex-direction: row-reverse;
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -43,6 +86,10 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+}
+
+html[lang="ar"] .nav-links {
+    flex-direction: row-reverse;
 }
 
 .nav-links a {
@@ -60,6 +107,10 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    display: inline-block;
 }
 
 #cart-count {
@@ -246,6 +297,11 @@ body {
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
+html[lang="ar"] .modal-content {
+    direction: rtl;
+    text-align: right;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -253,6 +309,10 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
+}
+
+html[lang="ar"] .close {
+    float: left;
 }
 
 .close:hover,
@@ -277,8 +337,16 @@ body {
     border-bottom: 1px solid #eee;
 }
 
+html[lang="ar"] .cart-item {
+    flex-direction: row-reverse;
+}
+
 .cart-item-info {
     flex: 1;
+}
+
+html[lang="ar"] .cart-item-info {
+    text-align: right;
 }
 
 .cart-item-name {
@@ -324,6 +392,11 @@ body {
     gap: 1rem;
 }
 
+html[lang="ar"] #checkout-form {
+    direction: rtl;
+    text-align: right;
+}
+
 #checkout-form h3 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -336,6 +409,11 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s;
+}
+
+html[lang="ar"] #checkout-form input {
+    text-align: right;
+    direction: rtl;
 }
 
 #checkout-form input:focus {
@@ -355,6 +433,10 @@ body {
     padding: 4rem 2rem;
     background: white;
     text-align: center;
+}
+
+html[lang="ar"] .about {
+    direction: rtl;
 }
 
 .about h2 {
@@ -378,6 +460,10 @@ body {
     text-align: center;
 }
 
+html[lang="ar"] .contact {
+    direction: rtl;
+}
+
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -398,6 +484,10 @@ footer {
     padding: 2rem;
 }
 
+html[lang="ar"] footer {
+    direction: rtl;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar .container {
@@ -405,9 +495,17 @@ footer {
         gap: 1rem;
     }
 
+    html[lang="ar"] .navbar .container {
+        flex-direction: column;
+    }
+
     .nav-links {
         gap: 1rem;
         flex-wrap: wrap;
+    }
+
+    html[lang="ar"] .nav-links {
+        flex-direction: row-reverse;
     }
 
     .hero-content h1 {
@@ -435,7 +533,20 @@ footer {
         font-size: 0.9rem;
     }
 
+    html[lang="ar"] .nav-links {
+        flex-direction: row-reverse;
+    }
+
     .products-grid {
         grid-template-columns: 1fr;
+    }
+
+    .language-switcher {
+        padding: 0.5rem 1rem;
+    }
+
+    .lang-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 }
