@@ -3,105 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El_hasan - High Quality Chairs</title>
-    <link rel="stylesheet" href="styles.css">
+    <title data-en="Welcome to El Hasan" data-ar="أهلاً بكم في الحسن"></title>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">El_hasan</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#cart" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a></li>
+    <header>
+        <div class="language-switcher">
+            <button data-en="English" data-ar="العربية">Language</button>
+        </div>
+        <nav>
+            <ul>
+                <li data-en="Home" data-ar="الصفحة الرئيسية"></li>
+                <li data-en="Products" data-ar="المنتجات"></li>
+                <li data-en="About" data-ar="حول"></li>
+                <li data-en="Contact" data-ar="اتصل"></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>El_hasan</h1>
-            <p>We Create High-Quality Chairs</p>
-            <p class="tagline">Comfort, Style, and Durability</p>
-            <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
-        </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1 data-en="Experience the Best" data-ar="جرب الأفضل"></h1>
     </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Our Premium Chair Collection</h2>
-            <div class="products-grid" id="products-grid">
-                <!-- Products will be loaded here by JavaScript -->
-            </div>
-        </div>
+    <section class="products">
+        <h2 data-en="Our Products" data-ar="منتجاتنا"></h2>
+        <!-- Products will be listed here -->
     </section>
-
-    <!-- Shopping Cart Modal -->
-    <div id="cart-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Shopping Cart</h2>
-            <div id="cart-items"></div>
-            <div class="cart-summary">
-                <h3>Total: $<span id="total-price">0.00</span></h3>
-                <button class="btn btn-primary" onclick="checkout()">Proceed to Checkout</button>
-            </div>
-        </div>
+    <div class="shopping-cart-modal">
+        <form>
+            <h2 data-en="Checkout" data-ar="الدفع"></h2>
+            <label data-en="Email" data-ar="البريد الإلكتروني">Email:</label>
+            <input type="email" required>
+            <label data-en="Phone" data-ar="الهاتف">Phone:</label>
+            <input type="tel" required>
+            <label data-en="Address" data-ar="العنوان">Address:</label>
+            <input type="text" required>
+            <button data-en="Submit" data-ar="إرسال">Submit</button>
+        </form>
     </div>
-
-    <!-- Checkout Modal -->
-    <div id="checkout-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Checkout</h2>
-            <form id="checkout-form">
-                <h3>Shipping Information</h3>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Address" required>
-                <input type="text" placeholder="City" required>
-                <input type="text" placeholder="Zip Code" required>
-
-                <h3>Payment Information</h3>
-                <input type="text" placeholder="Card Number" maxlength="16" required>
-                <div class="payment-row">
-                    <input type="text" placeholder="MM/YY" maxlength="5" required>
-                    <input type="text" placeholder="CVV" maxlength="3" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Complete Purchase</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About El_hasan</h2>
-            <p>We are dedicated to crafting high-quality chairs that combine comfort, style, and durability. Each chair is designed with premium materials and attention to detail.</p>
-        </div>
+    <section class="about">
+        <h2 data-en="About Us" data-ar="معلومات عنا"></h2>
+        <p data-en="We provide the best services." data-ar="نحن نوفر أفضل الخدمات."></p>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: elhasansandalye@gmail.com</p>
-            <p>Phone: ⁦+90 551 482 00 52⁩</p>
-            <p>Address: 123 Quality Lane, Comfort City, CC 12345</p>
-        </div>
+    <section class="contact">
+        <h2 data-en="Contact Us" data-ar="اتصل بنا"></h2>
+        <p data-en="Email: example@example.com" data-ar="البريد الإلكتروني: example@example.com"></p>
+        <p data-en="Phone: +123456789" data-ar="الهاتف: +123456789"></p>
+        <p data-en="Address: 123 Street Name, City, Country" data-ar="العنوان: 123 اسم الشارع، المدينة، الدولة"></p>
     </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 El_hasan. All rights reserved.</p>
+        <p data-en="Footer Content" data-ar="محتوى القدم"></p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
